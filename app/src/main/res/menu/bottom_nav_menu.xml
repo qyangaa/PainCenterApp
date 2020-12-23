@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:iconTint="@color/pastel_green"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_track"
+        android:icon="@drawable/ic_baseline_track_on_24"
+        android:title="@string/title_track" />
+
+    <item
+        android:id="@+id/navigation_treatment"
+        android:icon="@drawable/ic_baseline_treatment_24"
+        android:title="@string/title_treatment" />
+
+    <item
+        android:id="@+id/navigation_records"
+        android:icon="@drawable/ic_baseline_records_24"
+        android:title="@string/title_records" />
+
+    <item
+        android:id="@+id/navigation_doctosr"
+        android:icon="@drawable/ic_baseline_doctors_24"
+        android:title="@string/title_doctors" />
+
+</menu>

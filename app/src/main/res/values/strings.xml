@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PainCenterApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_track">Track</string>
+    <string name="title_treatment">Treatment</string>
+    <string name="title_records">Records</string>
+    <string name="title_doctors">Doctor</string>
+</resources>
