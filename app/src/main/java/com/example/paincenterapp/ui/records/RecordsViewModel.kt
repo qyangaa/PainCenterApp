@@ -1,13 +1,13 @@
-package com.example.paincenterapp.ui.treatment
+package com.example.paincenterapp.ui.records
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class TreatmentViewModel : ViewModel() {
+class RecordsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is treatment Fragment"
+        value = "This is records Fragment"
     }
     val text: LiveData<String> = _text
 }

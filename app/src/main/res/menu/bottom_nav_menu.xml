@@ -23,7 +23,7 @@
         android:title="@string/title_records" />
 
     <item
-        android:id="@+id/navigation_doctosr"
+        android:id="@+id/navigation_doctors"
         android:icon="@drawable/ic_baseline_doctors_24"
         android:title="@string/title_doctors" />
 
