@@ -6,10 +6,9 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.PointF
 import android.util.AttributeSet
-import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.MotionEvent
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.MotionEventCompat
+import androidx.core.view.GestureDetectorCompat
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import com.example.paincenterapp.R
 
@@ -20,6 +19,8 @@ class PinView @JvmOverloads constructor(context: Context?, attr: AttributeSet? =
     private val vPin = PointF()
     private var sPin: PointF? = null
     private var pin: Bitmap? = null
+    private var pinViewGestureListener = PinViewGestureListener()
+    private var mGestureDetector: GestureDetectorCompat? = null
     fun setPin(sPin: PointF?) {
         this.sPin = sPin
         initialize()
@@ -27,6 +28,9 @@ class PinView @JvmOverloads constructor(context: Context?, attr: AttributeSet? =
     }
 
     private fun initialize() {
+        mGestureDetector = GestureDetectorCompat(context, pinViewGestureListener)
+
+
         val density = resources.displayMetrics.densityDpi.toFloat()
         val pinDrawable =
             ResourcesCompat.getDrawable(resources, R.drawable.ic_baseline_test_24, null)
@@ -36,6 +40,13 @@ class PinView @JvmOverloads constructor(context: Context?, attr: AttributeSet? =
         pin = Bitmap.createScaledBitmap(pin!!, w.toInt(), h.toInt(), true)
 
     }
+
+//    override fun onTouchEvent(event: MotionEvent): Boolean {
+//        mGestureDetector?.onTouchEvent(event);
+//        // Handle any other event here, if not long press.
+//        return true
+//    }
+
 
 
     override fun onDraw(canvas: Canvas) {
