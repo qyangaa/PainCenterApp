@@ -28,9 +28,9 @@ class TrackFragment : Fragment() {
         val anatomyView = root.findViewById<PinView>(R.id.anatomyView)
         anatomyView.setImage(ImageSource.resource(R.drawable.anatomy_back));
         anatomyView.setPin(PointF(1602f, 405f))
-//        anatomyView.setOnLongClickListener {
-//
-//        }
+
+
+
         return root
     }
 }
